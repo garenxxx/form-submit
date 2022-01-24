@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/325c6d981f.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://sv.dhcnhn.vn/" id="main">
+        <div class="header">VALIDATION-FORM</div>
+        <div class="name">
+            <label class="heading">Họ và tên</label>
+            <input type="text" placeholder="your name" class="input-name" id="name">
+            <label for="name" class="footer"></label>
+        </div>
+        <div class="email">
+            <label class="heading">Email</label>
+            <input type="email" placeholder="youremail@gmail.com" class="input-email" id="email">
+            <label for="email" class="footer"></label>
+        </div>
+        <div class="password">
+            <label class="heading">Mật khẩu</label>
+            <input type="password" placeholder="your password" class="input-password" id="password">
+            <label for="password" class="footer"></label>
+        </div>
+        <div class="confirm-password">
+            <label class="heading">Xác nhận lại mật khẩu</label>
+            <input type="password" placeholder="confirm your password" class="input-confirmed" id="confirmed">
+            <label for="confirmed" class="footer"></label>
+        </div>
+        <div>
+            <div class="check">
+                <div>
+                    <label for="nam">Nam</label>
+                    <input class="box" name="gender" type="radio" value="nam">
+                </div>
+                <div>
+                    <label for="nu">Nữ</label>
+                    <input class="box" name="gender" type="radio" value="nu">
+                </div>
+                <div>
+                    <label for="khac">Khác</label>
+                    <input class="box" name="gender" type="radio" value="khac">
+                </div>
+            </div>
+            <label for="check" class="footer"></label>
+        </div>
+        <div class="button">
+            <button type="submit" class="btn">Đăng ký</button>
+        </div>
+    </form>
+    <script src="js.js"></script>
+    <script>
+        validator({
+            form: '#main',
+            rule: [ 
+                validator.isName('.input-name','Vui lòng nhập tên đầy đủ'), 
+                validator.isEmail('.input-email','vui lòng nhập email hợp lệ'), 
+                validator.isPassword('.input-password','Mật khẩu phải có ít nhất: 8 ký tự, 1 chữ hoa, 1 số, 1 kí hiệu đặc biệt'),
+                validator.isconfirmed('.input-confirmed','Mật khẩu nhập lại chưa đúng'),
+                validator.ischecked('.check','Vui lòng chọn giới tính')
+            ]
+        })
+    </script>
+</body>
+</html>

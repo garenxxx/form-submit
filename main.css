@@ -1,0 +1,77 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    height:100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.red{
+    box-shadow: 0 0 5px 1px red;
+}
+#main{
+    box-shadow: 0px 0px 4px 4px #ccc;
+    margin-top: 40px;
+}
+.header{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(92, 86, 86);
+    text-align: center;
+    padding: 20px 40px;
+}
+.heading {
+    font-size: 15px;
+    margin: 4px 0px;
+    display:block;
+}
+input {
+    height: 36px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+.footer {
+    display: block;
+    max-width: 225px;
+    margin-bottom: 16px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: red;
+}
+.name, .email, .password, .confirm-password, .button{
+    margin: 0px 20px;
+}
+.box {
+    height: 15px;
+
+}
+.check > div {
+    display: inline-block;
+}
+div:nth-child(6) {
+    margin: 0px 20px;
+}
+
+.btn {
+    margin: 12px 0;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(46, 238, 126);
+    width: 100%;
+    height: 36px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+}
+.btn:hover {
+    background-color: rgb(39, 214, 39);
+}
